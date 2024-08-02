@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Radio Canada Big", sans-serif;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+body {
+  background-color: rgb(152, 126, 255);
+  overflow: hidden;
+}
+/* customizable snowflake styling */
+.snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial;
+  text-shadow: 0 0 1px #000;
+}
+
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+section {
+  display: flex;
+  min-height: 100vh;
+}
+.container {
+  max-width: 90%;
+  margin: auto;
+  border: 5px solid white;
+  border-radius: 10px;
+}
+.profile {
+  width: 6rem;
+}
+.profile img {
+  width: 100%;
+  border-radius: 50%;
+}
+.user {
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 1rem;
+}
+.user-name {
+  font-size: 1.3rem;
+}
+.user-name p:last-child {
+  color: rgb(152, 126, 255);
+}
+.user-name img{
+  margin-left: 2rem;
+  width: 40px;
+  animation: spin 5s infinite linear;
+}
+@keyframes spin {
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+}
+hr{
+   border: 2px solid rgb(152, 126, 255);
+   border-radius: 10px;
+   color: rgb(152, 126, 255);
+}
+.wcdi{
+    font-size: 5rem;
+    padding: 3rem;
+    color: rgb(152, 126, 255);
+}
+.cricle{
+    position: absolute;
+    left: 30rem;
+    top: 5rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: 4px solid rgb(63, 212, 244);
+    background-color: rgb(63, 212, 244);
+    animation: flyAnimation 5s linear infinite;
+}
+.cricle-2{
+    position: absolute;
+    left: -7rem;
+    bottom:-3rem;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    border: 4px solid rgb(253, 153, 175);
+    background-color: rgb(253, 153, 175);
+    animation: flyAnimation 5s linear infinite;
+}
+@keyframes flyAnimation {
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+.container-right{
+    width: 80%;
+}
+.insert-data input{
+    border-radius: 10px;
+    border: none;
+}
+::placeholder{
+   color: red;
+}
+.icon-add{
+  position: relative;
+  top: -27px;
+  left: -50px;
+  font-size: 2rem;
+  color: rgb(152, 126, 255);
+  cursor: pointer;
+}
+.container-task{
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 0.4rem;
+  border-radius: 15px;
+}
+.task{
+  display: flex;
+  align-items: center;
+}
+.task span{
+  font-size: 0.7rem;
+}
+.task p{
+  margin: 0;
+  padding: 0.5rem;
+}
+.edit-delete span{
+  font-size: 1.3rem;
+  color: rgb(255, 51, 174);
+  cursor: pointer;
+
+}
+.over{
+  height: 30vh;
+  overflow-y: auto;
+}
+.is-invalid{
+  background-image: none !important;
+}
+.is-valid{
+  background-image: none !important;
+}
+.cancel span{
+  font-size: 1.3rem;
+  color: rgb(255, 51, 174);
+  cursor: pointer;
+}
+.cancel{
+  display: none;
+  align-items: center;
+}
+.icon-save{
+  position: relative;
+  top: -27px;
+  left: -50px;
+  font-size: 2rem;
+  color: rgb(152, 126, 255);
+  cursor: pointer;
+  
+}
+.swal2-actions .btn {
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+.editing {
+  background-color: lightgray; /* You can adjust the color as needed */
+}
+.done{
+  color: gray;
+  text-decoration: line-through;
+}
+.task span{
+  cursor: pointer;
+}
+.green {
+  color: green;
+  font-weight: bold;
+}
